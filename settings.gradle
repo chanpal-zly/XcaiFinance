@@ -1,0 +1,2 @@
+rootProject.name = "XcaiFinance"
+include ':app'
