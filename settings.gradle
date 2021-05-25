@@ -1,2 +1,3 @@
+include ':lib_resource'
 rootProject.name = "XcaiFinance"
 include ':app'
