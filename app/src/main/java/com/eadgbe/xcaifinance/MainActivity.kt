@@ -1,15 +1,18 @@
 package com.eadgbe.xcaifinance
 
 import android.os.Bundle
-import com.google.android.material.snackbar.Snackbar
+import android.util.Log
+import android.view.Menu
+import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
-import android.view.Menu
-import android.view.MenuItem
 import com.eadgbe.xcaifinance.databinding.ActivityMainBinding
+import com.google.android.material.snackbar.Snackbar
+import com.tencent.bugly.Bugly
+import com.tencent.bugly.beta.Beta
 
 class MainActivity : AppCompatActivity() {
 
@@ -32,6 +35,7 @@ class MainActivity : AppCompatActivity() {
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
         }
+        Bugly.init(applicationContext, "5cd359cdee", false)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
